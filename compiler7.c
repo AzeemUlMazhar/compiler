@@ -137,8 +137,7 @@ bool wordBreaker_lineChange(char inputChar){
 //function goes here
 bool wordBreaker_punctuator(char inputChar){
     if(inputChar==';' || inputChar=='(' || inputChar==')' || inputChar=='['
-     || inputChar==']' || inputChar=='{' || inputChar=='}' || inputChar==',' 
-     || inputChar==':' || inputChar=='.' ){
+     || inputChar==']' || inputChar=='{' || inputChar=='}' || inputChar==',' ){
         return true;
     }
     else
@@ -152,8 +151,7 @@ bool wordBreaker_punctuator(char inputChar){
 //function goes here
 bool wordBreaker_operator(char inputChar){
     if(inputChar=='+' || inputChar=='-' || inputChar=='*' || inputChar=='/' 
-    || inputChar=='<' || inputChar=='>' || inputChar=='=' || inputChar=='%' 
-    || inputChar=='!' ){
+    || inputChar=='<' || inputChar=='>' || inputChar=='=' || inputChar=='%'){
         return true;
     }
     else
@@ -595,9 +593,7 @@ bool isDelimiter(char ch)
     if (ch == ' ' || ch == '+' || ch == '-' || ch == '*' ||  
         ch == '/' || ch == ',' || ch == ';' || ch == '>' ||  
         ch == '<' || ch == '=' || ch == '(' || ch == ')' ||  
-        ch == '[' || ch == ']' || ch == '{' || ch == '}' || 
-        ch == '%' || ch=='=' || ch=='!' || ch==':' || ch=='.' 
-        || ch=='\n' || ch=='\r') 
+        ch == '[' || ch == ']' || ch == '{' || ch == '}' || ch == '%') 
         return (true); 
     return (false); 
 } 
@@ -607,7 +603,7 @@ bool isOperator(char ch)
 { 
     if (ch == '+' || ch == '-' || ch == '*' ||  
         ch == '/' || ch == '>' || ch == '<' ||  
-        ch == '=' || ch == '%' || ch == '!'  ) 
+        ch == '=' || ch == '%') 
         return (true); 
     return (false); 
 } 
@@ -626,14 +622,18 @@ bool validIdentifier(char* str)
 // Returns 'true' if the string is a KEYWORD. 
 bool isKeyword(char* str) 
 { 
-    if (!strcmp(str, "pub") || !strcmp(str, "pvr") || !strcmp(str, "prot") || !strcmp(str, "void") 
-        || !strcmp(str, "main") || !strcmp(str, "int") || !strcmp(str, "float") || !strcmp(str, "char") 
-        || !strcmp(str, "bool") || !strcmp(str, "str") || !strcmp(str, "class") || !strcmp(str, "func") 
-        || !strcmp(str, "arr") || !strcmp(str, "static") || !strcmp(str, "abst") || !strcmp(str, "for") 
-        || !strcmp(str, "if") || !strcmp(str, "else") || !strcmp(str, "while") || !strcmp(str, "do") 
-        || !strcmp(str, "try") || !strcmp(str, "finally") || !strcmp(str, "switch") || !strcmp(str, "new") 
-        || !strcmp(str, "null") || !strcmp(str, "::") || !strcmp(str, "@") || !strcmp(str, "->>") || !strcmp(str, "<<-") 
-        || !strcmp(str, "return") || !strcmp(str, "catch") || !strcmp(str, "throw") || !strcmp(str, "fixed")) 
+    if (!strcmp(str, "if") || !strcmp(str, "else")  || 
+        !strcmp(str, "while") || !strcmp(str, "do") ||  
+        !strcmp(str, "break") ||  
+         !strcmp(str, "continue") || !strcmp(str, "int") 
+        || !strcmp(str, "double") || !strcmp(str, "float") 
+        || !strcmp(str, "return") || !strcmp(str, "char") 
+        || !strcmp(str, "case") || !strcmp(str, "char") 
+        || !strcmp(str, "sizeof") || !strcmp(str, "long") 
+        || !strcmp(str, "short") || !strcmp(str, "typedef") 
+        || !strcmp(str, "switch") || !strcmp(str, "unsigned") 
+        || !strcmp(str, "void") || !strcmp(str, "static") 
+        || !strcmp(str, "struct") || !strcmp(str, "goto")) 
         return (true); 
     return (false); 
 } 
