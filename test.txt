@@ -1,0 +1,6 @@
+A b=new C("ABC","DEF",A,9,9.0e-9);
+int a =++c.d().g[a.b.c.g()["ABC"]++];
+2;
+goto;
+pub;
+throw;
